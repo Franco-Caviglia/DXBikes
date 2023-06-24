@@ -1,0 +1,17 @@
+
+<div class="lista-cards">
+    <div class="card" *ngFor="let articulo of articulos">
+        <div class="card-header">
+            <img [src]="articulo.imagen" height="75px" width="70px" align-content="center">
+            <p>{{articulo.marca}}</p>
+        </div>
+        <div class="card-body" >
+            <span *ngIf="articulo.medida">Medida: {{articulo.medida}}</span>
+            <span *ngIf="articulo.rodado">Rodado: {{articulo.rodado}}</span>
+            <span *ngIf="articulo.material">Material: {{articulo.material}}</span>
+            <span *ngIf="articulo.peso">Peso: {{articulo.peso}}</span>
+            <span *ngIf="articulo.precio">Precio: ${{articulo.precio}}</span>
+        </div>
+         <button class="btn-carrito" (click)="agregarCarrito(articulo)">Agregar</button>
+    </div>
+    </div>

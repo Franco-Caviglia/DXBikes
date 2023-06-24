@@ -1,0 +1,8 @@
+<div class="listaCarrito">
+    <div *ngFor="let item of productosSeleccionados">
+        <img class="mini-imagen" [src]="item.imagen" alt="">
+        <div class="title">
+            <p>Marca: {{item.marca}}</p>
+        </div>
+    </div>
+</div> 
