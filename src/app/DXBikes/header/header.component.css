@@ -6,6 +6,19 @@ nav{
 }
 
 nav ul{
+    display: flex;
     color: black;
     font-size: 10px;
+}
+
+nav li{
+    display: flex;
+    text-decoration: none;
+    margin: auto;
+    padding: 2px;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
 }

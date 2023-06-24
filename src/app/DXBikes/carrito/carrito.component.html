@@ -1,8 +1,11 @@
 <div class="listaCarrito">
-    <div *ngFor="let item of productosSeleccionados">
-        <img class="mini-imagen" [src]="item.imagen" alt="">
-        <div class="title">
-            <p>Marca: {{item.marca}}</p>
+    <div class="card">
+        <div *ngFor="let item of productosSeleccionados">
+            <img class="mini-imagen" [src]="item.imagen" alt="" height="75px" width="70px" align-content="center">
+            <div class="title">
+                <p>Marca: {{item.marca}}</p>
+            </div>
         </div>
     </div>
+    
 </div> 
