@@ -22,7 +22,7 @@ import { CarruselComponent } from './DXBikes/carrusel/carrusel.component';
     ArticulosComponent,
     CarritoComponent,
     ContactosComponent,
-    CarritoComponent
+    CarruselComponent
   ],
   imports: [
     BrowserModule,
