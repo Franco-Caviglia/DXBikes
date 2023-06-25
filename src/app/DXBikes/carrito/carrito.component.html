@@ -12,17 +12,16 @@
                   <td><img class="mini-imagen" [src]="item.imagen" alt="" height="75px" width="75px"></td>
                   <td><span>{{item.marca}}</span></td>
                   <td><span>${{item.precio}}</span></td>
-                  <td><button  (click)="quitarProducto(this.item)" class="btn-quitar"> X </button></td>
+                  <td><a (click)="quitarProducto(this.item)" class="btn-quitar"> <img src="assets/varios/boton_eliminar.png"> </a></td>
                 </tr>
             <!-- </div> -->
           </table>
         </div>
         <!-- <p *ngIf="!articulosSeleccionados.length"> Parece que no agregaste ningun articulo a tu carrito :( </p> -->
-        <div class="total">
-        <p *ngIf="articulosSeleccionados.length">Cantidad de articulos: {{cantidadArticulosTotal(articulosSeleccionados)}}</p>
-        <p *ngIf="articulosSeleccionados.length">Total: ${{ totalPrecio() }}</p>
+        <div class="total" *ngIf="articulosSeleccionados.length">
+        <p >Cantidad de articulos: {{cantidadArticulosTotal(articulosSeleccionados)}}</p>
+        <p >Total: ${{ totalPrecio() }}</p>
         </div>
     </div>
-
 </div>
 </body>

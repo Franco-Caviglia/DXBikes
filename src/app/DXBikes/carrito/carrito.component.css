@@ -1,7 +1,7 @@
 .listaCarrito{
     margin-top: 5px;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     align-content: center;
     align-items: center;
     text-align: center;
@@ -51,7 +51,7 @@
   height: 45px;
   width: 50px;
   align-content: center;
-  
+
 }
 
 
@@ -69,10 +69,20 @@
 }
 
 .total{
+  color: aliceblue;
+  background-color: #658f3e;
   display:flex;
   float: right;
+  border: 12px solid #658f3e;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 15px;
+
 }
 
 .total p{
   padding-left: 10px;
 }
+
+
