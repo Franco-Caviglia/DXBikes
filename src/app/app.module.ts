@@ -9,6 +9,7 @@ import { ArticulosComponent } from './DXBikes/articulos/articulos.component';
 import { CarritoComponent } from './DXBikes/carrito/carrito.component';
 import { ArticuloService } from './DXBikes/servicios/articuloService';
 import { CarritoService } from './DXBikes/servicios/carrito-service';
+import { ContactosComponent } from './contactos/contactos.component';
 
 
 
@@ -19,6 +20,7 @@ import { CarritoService } from './DXBikes/servicios/carrito-service';
     HomeComponent,
     ArticulosComponent,
     CarritoComponent,
+    ContactosComponent,
   ],
   imports: [
     BrowserModule,
