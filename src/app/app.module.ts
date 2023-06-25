@@ -10,7 +10,7 @@ import { CarritoComponent } from './DXBikes/carrito/carrito.component';
 import { ArticuloService } from './DXBikes/servicios/articuloService';
 import { CarritoService } from './DXBikes/servicios/carrito-service';
 import { ContactosComponent } from './DXBikes/contactos/contactos.component';
-
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,7 +24,8 @@ import { ContactosComponent } from './DXBikes/contactos/contactos.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [ArticuloService,CarritoService],
   bootstrap: [AppComponent]
