@@ -72,7 +72,7 @@
   color: aliceblue;
   background-color: #658f3e;
   display:flex;
-  float: right;
+  float: flex;
   border: 12px solid #658f3e;
   border-radius: 10px;
   padding: 10px;
