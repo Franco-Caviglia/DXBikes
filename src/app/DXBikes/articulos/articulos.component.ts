@@ -13,10 +13,15 @@ export class ArticulosComponent implements OnInit{
 
   public articulos!: Array<ArticuloModel>
   
+  //variables para la busqueda;
+  public listaCoincidencias: Array<any> = [];
+  public articuloBuscado: any; //Este va a ser llamado desde el input del html;
+  public articuloEncontrado: any;
 
+  
   // @Input() dataEntrante: any;
   public listaArticulos: Array<any> = [];
-  
+ 
 
   constructor(
     // private servicioCarrito: ServicioCarritoService,
@@ -28,13 +33,23 @@ export class ArticulosComponent implements OnInit{
 
   ngOnInit(): void {
     this.articulos = this.servicioArticulo.getArticulos();
+    
   }
 
   agregarCarrito(articulo: any){
     this.servicioCarrito.addArticulo(articulo)
-      
   }
-   
+  
+  buscarArticulo(){
+    const x = this.articulos.find((elemento) => {
+      if(elemento.marca === this.articuloBuscado){
+        this.articuloEncontrado = this.articulos.indexOf(elemento);
+        this.listaCoincidencias.push(this.articulos[this.articuloEncontrado]);
+      }
+    })
+  }
+  
+  
 }
 
 

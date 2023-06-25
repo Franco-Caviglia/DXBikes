@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { CarruselComponent } from '../carrusel/carrusel.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

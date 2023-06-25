@@ -10,9 +10,8 @@ import { CarritoComponent } from './DXBikes/carrito/carrito.component';
 import { ArticuloService } from './DXBikes/servicios/articuloService';
 import { CarritoService } from './DXBikes/servicios/carrito-service';
 import { ContactosComponent } from './DXBikes/contactos/contactos.component';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { FormsModule } from '@angular/forms';
 import { CarruselComponent } from './DXBikes/carrusel/carrusel.component';
-
 
 
 @NgModule({
@@ -23,12 +22,12 @@ import { CarruselComponent } from './DXBikes/carrusel/carrusel.component';
     ArticulosComponent,
     CarritoComponent,
     ContactosComponent,
-    CarruselComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SlickCarouselModule
+    FormsModule
 
   ],
   providers: [ArticuloService,CarritoService],
