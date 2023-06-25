@@ -1,13 +1,13 @@
 
 .banner {
-  justify-content: center;
+    justify-content: center;
     box-sizing: content-box;
     list-style-type: none;
-   
     overflow: hidden;
     background-color:#4FC3F7 ;
     display: flex;
     flex-direction: row;
+  
   }
   .text{
     align-items: center;
