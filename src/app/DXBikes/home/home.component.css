@@ -1,23 +1,30 @@
 
 .banner {
+  justify-content: center;
     box-sizing: content-box;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+   
     overflow: hidden;
     background-color:#4FC3F7 ;
-    
+    display: flex;
+    flex-direction: row;
   }
   .text{
-    float: auto;
-    border-right-width:10px ;
+    align-items: center;
+    align-content: center;
+    padding: 0px;
+    margin: 0px;
+    border-right-width:10px ; 
+    display: flex;
   }
   .center-text{
-    float: left;
-    display: block;
+    padding-top: 5px;
+    align-items: center;
+    align-content: center;
+    display: inline-block;
     color: #252525;
     text-align: center;
-    padding: 10px 0px;
+    padding-left: 100px;
     text-decoration:none;
     flex-direction: row;
    text-align: center;
