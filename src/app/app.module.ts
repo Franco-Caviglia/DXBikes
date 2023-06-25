@@ -10,6 +10,8 @@ import { CarritoComponent } from './DXBikes/carrito/carrito.component';
 import { ArticuloService } from './DXBikes/servicios/articuloService';
 import { CarritoService } from './DXBikes/servicios/carrito-service';
 import { ContactosComponent } from './DXBikes/contactos/contactos.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { CarruselComponent } from './DXBikes/carrusel/carrusel.component';
 
 
 
@@ -21,10 +23,13 @@ import { ContactosComponent } from './DXBikes/contactos/contactos.component';
     ArticulosComponent,
     CarritoComponent,
     ContactosComponent,
+    CarruselComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SlickCarouselModule
+
   ],
   providers: [ArticuloService,CarritoService],
   bootstrap: [AppComponent]
