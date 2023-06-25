@@ -4,8 +4,9 @@
             <img class="mini-imagen" [src]="item.imagen" alt="" height="75px" width="70px" align-content="center">
             <div class="title">
                 <p>Marca: {{item.marca}}</p>
+                <button class="btn-eliminar" (click)="quitarProducto(this.item)"> quitar</button>
             </div>
         </div>
     </div>
-    
-</div> 
+
+</div>

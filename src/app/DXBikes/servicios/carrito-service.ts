@@ -19,4 +19,8 @@ export class CarritoService {
     obtenerArticuloSeleccion(){
         return this.articuloSeleccion;
     }
+
+    quitarProducto(articulo: any){
+      this.articuloSeleccion.splice(articulo, 1)
+    }
 }

@@ -23,4 +23,8 @@ export class CarritoComponent {
   obtenerArticuloSeleccion() {
     return this.productosSeleccionados;
   }
+
+  quitarProducto(producto : any){
+    this.productosSeleccionados.splice(producto, 1)
+  }
 }
