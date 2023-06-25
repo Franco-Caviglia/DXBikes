@@ -72,17 +72,20 @@
   color: aliceblue;
   background-color: #658f3e;
   display:flex;
-  float: flex;
+  align-content: center;
+  text-align: center;
   border: 12px solid #658f3e;
   border-radius: 10px;
   padding: 10px;
   margin-top: 10px;
   font-size: 15px;
-
 }
 
 .total p{
-  padding-left: 10px;
+  margin: auto;
+  display: flex;
+  text-align: center;
+  align-items: center;
 }
 
 
