@@ -10,39 +10,50 @@ import { ArticuloModel } from '../model/articulo-model';
 export class CarritoComponent {
 
 
-  productosSeleccionados: any[] = [];
+  articulosSeleccionados: any[] = [];
   calculoPrecios: any[] = []
 
   constructor(
     private servicioCarrito: CarritoService
   ){
-    this.productosSeleccionados = this.servicioCarrito.obtenerArticuloSeleccion();
+    this.articulosSeleccionados = this.servicioCarrito.obtenerArticuloSeleccion();
   }
 
+  
   agregarProducto(producto: any) {
-    this.productosSeleccionados.push(producto);
+    this.articulosSeleccionados.push(producto);
     this.calculoPrecios.reduce((precio,total) => precio + total)
   }
 
+  
   obtenerArticuloSeleccion() {
-    return this.productosSeleccionados;
+    return this.articulosSeleccionados;
   }
 
+
   quitarProducto(producto : any){
-    this.productosSeleccionados.splice(producto, 1)
+    this.articulosSeleccionados.splice(producto, 1)
+  }
+
+  cantidadArticulos(articulo: any){
+    let cantidad = 0;
+    for (const articulo of this.articulosSeleccionados){
+      cantidad += 1;
+    }
+    return cantidad;
   }
 
   totalPrecio() : number {
 
-
     let total = 0;
 
-    for (const producto of this.productosSeleccionados) {
+    for (const producto of this.articulosSeleccionados) {
       total += producto.precio;
     }
 
     return total;
   }
+
 
 
 }

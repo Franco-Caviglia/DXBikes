@@ -10,13 +10,15 @@ import { CarritoComponent } from './DXBikes/carrito/carrito.component';
 import { ArticuloService } from './DXBikes/servicios/articuloService';
 import { CarritoService } from './DXBikes/servicios/carrito-service';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
     ArticulosComponent,
-    CarritoComponent
+    CarritoComponent,
   ],
   imports: [
     BrowserModule,

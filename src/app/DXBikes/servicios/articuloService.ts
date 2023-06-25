@@ -16,7 +16,6 @@ export class ArticuloService{
         ]
     }
 
-
     getArticulos():Array<ArticuloModel> {
         return this.articulos;
     }

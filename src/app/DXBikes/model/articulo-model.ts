@@ -1,5 +1,4 @@
 
-
 export class ArticuloModel{
     constructor(
         public marca: String, //contendra la marca del articulo;
