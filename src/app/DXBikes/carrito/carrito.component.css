@@ -6,9 +6,18 @@
 
 .btn-carrito{
   font-size: 8px;
-  display: block;
-  float: right;
+  display: inline-flex;
+
   background-color: #7AAB39;
   border: 1px solid black;
   border-radius: 4px;
+}
+
+.grilla{
+  display: inline-flex;
+}
+
+.cabecera{
+  display: inline-flex;
+  margin-left: 50px;
 }

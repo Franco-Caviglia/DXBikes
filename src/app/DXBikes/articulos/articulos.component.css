@@ -2,7 +2,7 @@
     margin-top: 5px;
     display: flex;
     flex-direction: row;
-    
+
 }
 
 .card {
@@ -22,16 +22,15 @@
 }
 
 .card-header{
-    
+
     align-items: center;
     font-size: small;
     text-align: center;
-    
+
 }
 
 .card-body{
     margin: auto;
-    
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -51,4 +50,10 @@
 
 .btn-carrito:hover{
     background-color: #9F9F9F;
+}
+
+.total{
+  display: flex;
+  margin-left: 1300;
+  float: right;
 }
