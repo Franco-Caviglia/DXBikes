@@ -1,3 +1,7 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
 <div class="listaCarrito">
     <div class="card">
         <div *ngFor="let item of articulosSeleccionados">
@@ -7,18 +11,18 @@
                   <!-- <img class="mini-imagen" [src]="item.imagen" alt="" height="75px" width="70px" align-content="center"> -->
                   <td><img class="mini-imagen" [src]="item.imagen" alt="" height="75px" width="75px"></td>
                   <td><span>{{item.marca}}</span></td>
-                  <td><span>{{item.precio}}</span></td>
+                  <td><span>${{item.precio}}</span></td>
                   <td><button  (click)="quitarProducto(this.item)" class="btn-quitar"> X </button></td>
                 </tr>
             <!-- </div> -->
           </table>
         </div>
-        
         <!-- <p *ngIf="!articulosSeleccionados.length"> Parece que no agregaste ningun articulo a tu carrito :( </p> -->
         <div class="total">
-        <p *ngIf="articulosSeleccionados.length">Cantidad de articulos: {{cantidadArticulos(articulosSeleccionados)}}</p>
-        <p *ngIf="articulosSeleccionados.length">Total: {{ totalPrecio() }}</p>
+        <p *ngIf="articulosSeleccionados.length">Cantidad de articulos: {{cantidadArticulosTotal(articulosSeleccionados)}}</p>
+        <p *ngIf="articulosSeleccionados.length">Total: ${{ totalPrecio() }}</p>
         </div>
     </div>
 
 </div>
+</body>

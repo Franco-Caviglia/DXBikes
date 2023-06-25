@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CarritoService } from '../servicios/carrito-service';
-import { ArticuloModel } from '../model/articulo-model';
+
 
 @Component({
   selector: 'app-carrito',
@@ -8,7 +8,6 @@ import { ArticuloModel } from '../model/articulo-model';
   styleUrls: ['./carrito.component.css']
 })
 export class CarritoComponent {
-
 
   articulosSeleccionados: any[] = [];
   calculoPrecios: any[] = []
@@ -35,7 +34,8 @@ export class CarritoComponent {
     this.articulosSeleccionados.splice(producto, 1)
   }
 
-  cantidadArticulos(articulo: any){
+
+  cantidadArticulosTotal(articulo: any){
     let cantidad = 0;
     for (const articulo of this.articulosSeleccionados){
       cantidad += 1;
@@ -53,7 +53,5 @@ export class CarritoComponent {
 
     return total;
   }
-
-
 
 }

@@ -1,3 +1,7 @@
+
+
+
+
 .lista-cards{
     margin-top: 5px;
     display: flex;
@@ -22,13 +26,18 @@
 }
 
 .card-header{
-
     align-items: center;
     font-size: small;
     text-align: center;
 
 }
 
+.card-header p {
+    margin-bottom: 5px;
+    font-size: 10px;
+    margin-top: 0%;
+    font-weight: bold;
+}
 .card-body{
     margin: auto;
     display: flex;
