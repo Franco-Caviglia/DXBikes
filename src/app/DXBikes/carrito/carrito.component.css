@@ -4,6 +4,7 @@
     flex-direction: row;
 }
 
+
 .btn-carrito{
   font-size: 8px;
   display: inline-flex;
@@ -13,11 +14,25 @@
   border-radius: 4px;
 }
 
+.btn-quitar{
+  display: inline-table;
+  margin-left: 100px;
+}
+
 .grilla{
   display: inline-flex;
+  text-align: center;
 }
 
 .cabecera{
   display: inline-flex;
   margin-left: 50px;
+}
+
+.linea {
+  border-top: 1px solid black;
+  height: 2px;
+  max-width: 200px;
+  padding: 0;
+  margin: 20px auto 0 auto;
 }

@@ -1,8 +1,7 @@
 <div class="listaCarrito">
     <div class="card">
 
-        <div *ngFor="let item of productosSeleccionados"  class="grilla">
-            <img class="mini-imagen" [src]="item.imagen" alt="" height="75px" width="70px" align-content="center">
+        <div *ngFor="let item of productosSeleccionados">
             <!-- <div class ="cabecera">
               <article >
                 <span><b>>Marca</b></span>
@@ -16,10 +15,13 @@
             </div> -->
             <div class="grilla">
                 <article>
-                  <span> Marca: {{item.marca}}</span>
-                  <span> Precio: {{item.precio}}</span><br>
-                <button  (click)="quitarProducto(this.item)"> quitar</button>
-
+                  <!-- <img class="mini-imagen" [src]="item.imagen" alt="" height="75px" width="70px" align-content="center"> -->
+                  <img class="mini-imagen" [src]="item.imagen" alt="" height="75px" width="75px">
+                  <span> Marca: {{item.marca}}</span><br>
+                  <span> Precio: {{item.precio}}</span>
+                  <button  (click)="quitarProducto(this.item)" class="btn-quitar"> X </button>
+                  <div class="linea"></div>
+                  <br>
               </article>
             </div>
         </div>
