@@ -25,6 +25,7 @@
               </article>
             </div>
         </div>
+        <p *ngIf="!productosSeleccionados.length"> Parece que no agregaste ningun articulo a tu carrito :( </p>
         <p class="total" *ngIf="productosSeleccionados.length">Total: {{ totalPrecio() }}</p>
     </div>
 
