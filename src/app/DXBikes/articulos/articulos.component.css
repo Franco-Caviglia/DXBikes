@@ -1,5 +1,11 @@
 
-
+.lista-cards-buscados{
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding-bottom: 20px;
+}
 
 
 .lista-cards{
@@ -68,14 +74,17 @@
 }
 
 .container{
-  position:fixed;
-  left: 75%;
-  top: 20%;
-  transform: translate(-50%, -50%);
-  padding: 10px;
+    display: block;
+    
+    position:fixed;
+    left: 10%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
 }
 
 input {
+    
 	outline: none;
 	box-sizing: border-box;
 	height: 60px;
@@ -94,6 +103,7 @@ input {
 
 .btn-buscar {
 	position: absolute;
+    float: right; 
 	right: 0px;
 	top: 0px;
 	width: 80px;
@@ -114,7 +124,7 @@ input {
 }
 
 .container:hover input {
-	width: 350px;
+	width: 200px;
 }
 
 .container:hover i{
@@ -123,4 +133,11 @@ input {
 
 .btn:hover{
 	background: #cc0000;
+}
+
+.listaBuscados{
+    position: relative;
+    padding-top: 25px;
+    margin-top: 20px;
+    margin-bottom: 5px;
 }

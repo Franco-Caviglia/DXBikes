@@ -44,12 +44,15 @@ export class ArticulosComponent implements OnInit{
   }
 
   buscarArticulo(){
+    this.resetSearchList();
     const x = this.articulos.find((elemento) => {
-      if(elemento.marca === this.articuloBuscado){
+      
+      if(elemento.marca === this.articuloBuscado || elemento.tipo === this.articuloBuscado
+        || elemento.material.toLowerCase().startsWith(this.articuloBuscado, 0) === this.articuloBuscado || (elemento.rodado || elemento.medida) === this.articuloBuscado){
         this.articuloEncontrado = this.articulos.indexOf(elemento);
         this.listaCoincidencias.push(this.articulos[this.articuloEncontrado]);
       }
-
+      
       // if(this.ruedaFiltrada == true)[
       //   this.articuloEncontrado = this.articulos.indexOf(elemento)
       // ]
@@ -57,6 +60,14 @@ export class ArticulosComponent implements OnInit{
     })
   }
 
+  resetSearchList(){
+    while(this.listaCoincidencias.length > 0){
+      this.listaCoincidencias.pop();
+    }
+    
+  }
+
+  
   // filtroRueda(){
 
   //   if(this.ruedaFiltrada == false){
