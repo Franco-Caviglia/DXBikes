@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CarruselComponent } from '../carrusel/carrusel.component';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,12 +7,7 @@ import { CarruselComponent } from '../carrusel/carrusel.component';
 })
 export class HomeComponent {
   
-  slickCarouselConfig = {
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    autoplay: true,
-    autoplaySpeed: 2000
+  
   };
 
-}
+

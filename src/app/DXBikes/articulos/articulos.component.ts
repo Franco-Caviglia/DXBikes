@@ -11,17 +11,15 @@ import { CarritoService } from '../servicios/carrito-service';
 export class ArticulosComponent implements OnInit{
   title = 'Articulos';
 
+  // este va a ser cada uno de los articulos, de tipo Array<ArticuloModel>
   public articulos!: Array<ArticuloModel>
 
   //variables para la busqueda;
   public listaCoincidencias: Array<any> = [];
   public articuloBuscado: any; //Este va a ser llamado desde el input del html;
   public articuloEncontrado: any;
-  // public ruedaFiltrada: boolean = false //nos va a decir si el checkbox del filtro de ruedas esta tildado
-  // public cuadroFiltrado: boolean = false // nos va a decir si el checkbox de filtro de ruedas esta tildado
 
-
-  // @Input() dataEntrante: any;
+  // listaArticulos va a contener todos los articulos 
   public listaArticulos: Array<any> = [];
 
 

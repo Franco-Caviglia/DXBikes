@@ -12,29 +12,20 @@ export class CarritoComponent {
   articulosSeleccionados: any[] = [];
   calculoPrecios: any[] = []
 
+  //inicializamos el servicio carrito
   constructor(
     private servicioCarrito: CarritoService
   ){
+    //obtenemos los articulos seleccionados desde el componente Articulos 
     this.articulosSeleccionados = this.servicioCarrito.obtenerArticuloSeleccion();
   }
 
-  
-  agregarProducto(articulo: any) {
-    this.articulosSeleccionados.push(articulo);
-    this.calculoPrecios.reduce((precio,total) => precio + total)
-  }
-
-  
-  obtenerArticuloSeleccion() {
-    return this.articulosSeleccionados;
-  }
-
-
+  //se utiliza metodo splice para quitar el producto 
   quitarProducto(articulo : any){
     this.articulosSeleccionados.splice(articulo, 1)
   }
 
-
+  // se utiliza para contabilizar los articulos del carrito 
   cantidadArticulosTotal(articulo: any){
     let cantidad = 0;
     for (const articulo of this.articulosSeleccionados){
@@ -43,7 +34,7 @@ export class CarritoComponent {
     return cantidad;
   }
 
-  
+  // para contabilizar el precio total de los articulos del carrito
   totalPrecio() : number {
 
     let total = 0;

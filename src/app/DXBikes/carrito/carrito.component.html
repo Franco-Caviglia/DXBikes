@@ -2,23 +2,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+  <!--contenedor de articulo del carrito  -->
 <div class="listaCarrito">
     <div class="card">
+      <!--Utilizamos directiva ngFor para recorrer los articulos del carrito -->
         <div *ngFor="let item of articulosSeleccionados">
         <table class="tabla">
-            <!-- <div class="grilla"> -->
                 <tr class="tabla-tr">
-                  <!-- <img class="mini-imagen" [src]="item.imagen" alt="" height="75px" width="70px" align-content="center"> -->
+                  <!--Utilizamos la interpolacion para retornar los valores de la propiedades -->
                   <td><img class="mini-imagen" [src]="item.imagen" alt="" height="75px" width="75px"></td>
                   <td><span>{{item.marca}}</span></td>
                   <td><span>{{item.tipo}}</span></td>
                   <td><span>${{item.precio}}</span></td>
                   <td><a (click)="quitarProducto(this.item)" class="btn-quitar"> <img src="assets/varios/boton_eliminar.png"> </a></td>
                 </tr>
-            <!-- </div> -->
           </table>
         </div>
-        <!-- <p *ngIf="!articulosSeleccionados.length"> Parece que no agregaste ningun articulo a tu carrito :( </p> -->
+         <p *ngIf="!articulosSeleccionados.length"> Parece que no agregaste ningun articulo a tu carrito :( </p> 
+         <!--Utilizamos la directiva ngIf para verificar la condicion de que es carrito contenga articulos -->
         <div class="total" *ngIf="articulosSeleccionados.length">
         <p >Cantidad de articulos: {{cantidadArticulosTotal(articulosSeleccionados)}}</p>
         <p >Total: ${{ totalPrecio() }}</p>

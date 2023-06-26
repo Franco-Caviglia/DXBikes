@@ -13,7 +13,7 @@ import { ContactosComponent } from './DXBikes/contactos/contactos.component';
 import { FormsModule } from '@angular/forms';
 import { CarruselComponent } from './DXBikes/carrusel/carrusel.component';
 
-
+// Importamos y declaramos los componentes que se utilizan en nuestra aplicaccion 
 @NgModule({
   declarations: [
     AppComponent,

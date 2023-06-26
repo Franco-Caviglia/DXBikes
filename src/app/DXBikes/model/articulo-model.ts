@@ -1,4 +1,4 @@
-
+// este en nuestro modelo de articulos el cual lo llamamos en el componentes articulos  
 export class ArticuloModel{
     constructor(
         public marca: String, //contendra la marca del articulo;

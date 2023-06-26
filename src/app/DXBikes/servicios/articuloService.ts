@@ -1,10 +1,13 @@
 import { Injectable } from "@angular/core";
 import { ArticuloModel } from "../model/articulo-model";
 
+//@Injectable es un decorador que marca una clase como inyectable y permite
+//inyectarla como dependencia en otro componentes, servicios o modulos; 
 @Injectable()
 export class ArticuloService{
     public articulos: Array<ArticuloModel>
 
+    // definimos los valores de las propiedades del articulos model 
     constructor(){
         this.articulos = [
             new ArticuloModel( 'Patriot', 53994, 'Cuadro',  '' , '../assets/Cuadros/Patriot.jpg', '29', '','2.1kg'),
@@ -15,7 +18,7 @@ export class ArticuloService{
             new ArticuloModel( 'Shimano Deore Xt', 158336, 'Rueda', 'Aluminio', '../assets/Ruedas/R29.jpg', '', '29', '')
         ]
     }
-
+    // Este metodo nos permite retornar las propiedades 
     getArticulos():Array<ArticuloModel> {
         return this.articulos;
     }

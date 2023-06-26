@@ -9,17 +9,19 @@ export class CarritoService {
     servicioArticulo: any;
 
     constructor(){}
-
+    //Contiene los articulos del carrito 
     articuloSeleccion: any[]=[];
-
+    // Metodo que agrega los articulos al carrito 
     addArticulo(articulo: any){
         this.articuloSeleccion.push(articulo);
     }
 
+    // Retorna los articulos dentro del carrito 
     obtenerArticuloSeleccion(){
         return this.articuloSeleccion;
     }
 
+    // Quita el/los articulos del carrito 
     quitarProducto(articulo: any){
       this.articuloSeleccion.splice(articulo, 1)
     }
