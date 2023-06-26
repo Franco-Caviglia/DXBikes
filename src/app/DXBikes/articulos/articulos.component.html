@@ -2,8 +2,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<div class="container">
     <input class="buscarArticulo" placeholder="Buscar" [(ngModel)]="articuloBuscado">
-    <button class="btn-buscar" (click)="buscarArticulo()">Buscar</button>
+    <i class="btn-buscar" (click)="buscarArticulo()">Buscar</i>
+    </div>
     <div *ngIf="articuloEncontrado!=0">
         <div class="lista-cards">
         <div class="card" *ngFor="let item of listaCoincidencias">
@@ -21,7 +23,7 @@
             <button class="btn-carrito" (click)="agregarCarrito(item)">Agregar</button>
         </div>
     </div>
-        
+
     </div>
 <div class="lista-cards">
     <div class="card" *ngFor="let articulo of articulos">
@@ -41,4 +43,4 @@
     </div>
 
 
-</body> 
+</body>
