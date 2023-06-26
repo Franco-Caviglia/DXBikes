@@ -34,28 +34,30 @@ export class ArticulosComponent implements OnInit{
 
   // public item: Articulo[] = []; //Este sera el array que contendra los articulos con sus respectivas propiedades;
 
+  //Iniciamos el servicio articulos en el componente
   ngOnInit(): void {
     this.articulos = this.servicioArticulo.getArticulos();
-
   }
 
+  //esta es nuestra funcion para agregar items al carrito
   agregarCarrito(articulo: any){
     this.servicioCarrito.addArticulo(articulo)
   }
 
+  //esta es la funcion para buscar items en la lista de articulos;
   buscarArticulo(){
+    //esta funcion sirve para limpiar la lista de coincidencias y tener una lista limpia para poder traer los nuevos articulos;
     this.resetSearchList();
+
     const x = this.articulos.find((elemento) => {
       
+      //buscamos el articulo que estamos buscando dentro de la lista articulos, y si hay coincidencia, se inserta en la lista de coincidencias,
+      //que utilizaremos para mostrar los elementos buscados;
       if(elemento.marca === this.articuloBuscado || elemento.tipo === this.articuloBuscado
         || elemento.material.toLowerCase().startsWith(this.articuloBuscado, 0) === this.articuloBuscado || (elemento.rodado || elemento.medida) === this.articuloBuscado){
         this.articuloEncontrado = this.articulos.indexOf(elemento);
         this.listaCoincidencias.push(this.articulos[this.articuloEncontrado]);
       }
-      
-      // if(this.ruedaFiltrada == true)[
-      //   this.articuloEncontrado = this.articulos.indexOf(elemento)
-      // ]
 
     })
   }
@@ -66,15 +68,6 @@ export class ArticulosComponent implements OnInit{
     }
     
   }
-
-  
-  // filtroRueda(){
-
-  //   if(this.ruedaFiltrada == false){
-  //     this.ruedaFiltrada = true
-  //   }else{
-  //     this.ruedaFiltrada = false
-  //   }
 
 
 }
