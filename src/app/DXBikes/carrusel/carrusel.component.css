@@ -16,8 +16,29 @@ h1 {
     -o-transition: all 0.75s ease;
     transition: all 0.75s ease;
 
-    height: 500px;
+    height: 200px;
     width: 300%;
+}
+.imagenes3{
+    height: 1200px;
+}
+.cuerpo2{
+    margin:0;
+}
+#carrusel-contenido2 {
+    height: 60%;
+    margin: 0 ;
+    overflow: hidden;
+    text-align: left;
+}
+#carusel-caja2{
+    margin: 0;
+    padding:0;
+;
+}
+.imagenes2{
+    height: 100%;
+    width: 100%;
 }
 
 #carrusel-contenido {
