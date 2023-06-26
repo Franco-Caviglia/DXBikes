@@ -19,8 +19,8 @@ export class CarritoComponent {
   }
 
   
-  agregarProducto(producto: any) {
-    this.articulosSeleccionados.push(producto);
+  agregarProducto(articulo: any) {
+    this.articulosSeleccionados.push(articulo);
     this.calculoPrecios.reduce((precio,total) => precio + total)
   }
 
@@ -30,8 +30,8 @@ export class CarritoComponent {
   }
 
 
-  quitarProducto(producto : any){
-    this.articulosSeleccionados.splice(producto, 1)
+  quitarProducto(articulo : any){
+    this.articulosSeleccionados.splice(articulo, 1)
   }
 
 
@@ -43,6 +43,7 @@ export class CarritoComponent {
     return cantidad;
   }
 
+  
   totalPrecio() : number {
 
     let total = 0;

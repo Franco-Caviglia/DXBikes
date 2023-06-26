@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ArticuloService } from '../servicios/articuloService';
 import { ArticuloModel } from '../model/articulo-model';
 import { CarritoService } from '../servicios/carrito-service';
-import { ThisReceiver } from '@angular/compiler';
 
 @Component({
   selector: 'app-articulos',
@@ -18,8 +17,8 @@ export class ArticulosComponent implements OnInit{
   public listaCoincidencias: Array<any> = [];
   public articuloBuscado: any; //Este va a ser llamado desde el input del html;
   public articuloEncontrado: any;
-  public ruedaFiltrada: boolean = false //nos va a decir si el checkbox del filtro de ruedas esta tildado
-  public cuadroFiltrado: boolean = false // nos va a decir si el checkbox de filtro de ruedas esta tildado
+  // public ruedaFiltrada: boolean = false //nos va a decir si el checkbox del filtro de ruedas esta tildado
+  // public cuadroFiltrado: boolean = false // nos va a decir si el checkbox de filtro de ruedas esta tildado
 
 
   // @Input() dataEntrante: any;
@@ -54,11 +53,10 @@ export class ArticulosComponent implements OnInit{
       //buscamos el articulo que estamos buscando dentro de la lista articulos, y si hay coincidencia, se inserta en la lista de coincidencias,
       //que utilizaremos para mostrar los elementos buscados;
       if(elemento.marca === this.articuloBuscado || elemento.tipo === this.articuloBuscado
-        || elemento.material.toLowerCase().startsWith(this.articuloBuscado, 0) === this.articuloBuscado || (elemento.rodado || elemento.medida) === this.articuloBuscado){
+        || elemento.material === this.articuloBuscado || (elemento.rodado || elemento.medida) === this.articuloBuscado){
         this.articuloEncontrado = this.articulos.indexOf(elemento);
         this.listaCoincidencias.push(this.articulos[this.articuloEncontrado]);
       }
-
     })
   }
 
