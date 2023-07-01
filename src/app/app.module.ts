@@ -16,6 +16,7 @@ import { AccesoriosComponent } from './DXBikes/dropdown/accesorios/accesorios.co
 import { BMXComponent } from './DXBikes/dropdown/bmx/bmx.component';
 import { ChicosComponent } from './DXBikes/dropdown/chicos/chicos.component';
 import { UrbanaComponent } from './DXBikes/dropdown/urbana/urbana.component';
+import { LoginComponent } from './DXBikes/login/login.component';
 
 // Importamos y declaramos los componentes que se utilizan en nuestra aplicaccion 
 @NgModule({
@@ -30,7 +31,8 @@ import { UrbanaComponent } from './DXBikes/dropdown/urbana/urbana.component';
     AccesoriosComponent,
     BMXComponent,
     ChicosComponent,
-    UrbanaComponent
+    UrbanaComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

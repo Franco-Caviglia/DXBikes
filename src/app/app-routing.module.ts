@@ -8,9 +8,11 @@ import { AccesoriosComponent } from './DXBikes/dropdown/accesorios/accesorios.co
 import { BMXComponent } from './DXBikes/dropdown/bmx/bmx.component';
 import { ChicosComponent } from './DXBikes/dropdown/chicos/chicos.component';
 import { UrbanaComponent } from './DXBikes/dropdown/urbana/urbana.component';
+import { LoginComponent } from './DXBikes/login/login.component';
 
 // Se definen las rutas 
 const routes: Routes = [
+  {path:'login', component:LoginComponent},
   { path:'urbanas', component:UrbanaComponent },
   { path:'chicos', component:ChicosComponent},
   { path:'bmx', component:BMXComponent},
