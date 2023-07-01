@@ -21,15 +21,18 @@ h1 {
 }
 .imagenes3{
     height: 800px;
+    flex: 1;
 }
 .cuerpo2{
     margin:0;
+    display: flex;
 }
 #carrusel-contenido2 {
     height: 60%;
     margin: 0 ;
     overflow: hidden;
     text-align: left;
+    flex: 1;
 }
 #carusel-caja2{
     margin: 0;
@@ -38,6 +41,7 @@ h1 {
 }
 .imagenes2{
     height: 100%;
+    flex: 1 ;
     width: 100%;
 }
 

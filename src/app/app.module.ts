@@ -12,6 +12,10 @@ import { CarritoService } from './DXBikes/servicios/carrito-service';
 import { ContactosComponent } from './DXBikes/contactos/contactos.component';
 import { FormsModule } from '@angular/forms';
 import { CarruselComponent } from './DXBikes/carrusel/carrusel.component';
+import { AccesoriosComponent } from './DXBikes/dropdown/accesorios/accesorios.component';
+import { BMXComponent } from './DXBikes/dropdown/bmx/bmx.component';
+import { ChicosComponent } from './DXBikes/dropdown/chicos/chicos.component';
+import { UrbanaComponent } from './DXBikes/dropdown/urbana/urbana.component';
 
 // Importamos y declaramos los componentes que se utilizan en nuestra aplicaccion 
 @NgModule({
@@ -22,7 +26,11 @@ import { CarruselComponent } from './DXBikes/carrusel/carrusel.component';
     ArticulosComponent,
     CarritoComponent,
     ContactosComponent,
-    CarruselComponent
+    CarruselComponent,
+    AccesoriosComponent,
+    BMXComponent,
+    ChicosComponent,
+    UrbanaComponent
   ],
   imports: [
     BrowserModule,
